@@ -1,0 +1,14 @@
+.makerCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #eaeaea;
+  min-height: 145px;
+  transition: all 0.3s;
+  &:hover {
+    box-shadow: 0 10px 25px rgba( 41, 52, 73, 0.5);
+  }
+  &:active {
+    opacity: 0.3;
+  }
+}

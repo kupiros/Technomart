@@ -1,0 +1,82 @@
+.services {
+  padding-top: 65px;
+  background-color: #f4f8f9;
+}
+
+.services__title {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 30px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.services__parph {
+  font-family: "PT Sans";
+  font-size: 13px;
+  line-height: 24px;
+  margin-bottom: 70px;
+}
+
+.services-wraper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.services__butList {
+  position: relative;
+  width: 240px;
+  &::after {
+    content: url('../img/serv-shadow.png');    
+    position: absolute;
+    right: 0;
+    top: -40px;
+  }
+  
+}
+
+.services__sliderBut {
+  width: 100%;
+  text-align: left;
+  padding: 19px;  
+  font-size: 23px;
+  line-height: 22px;
+  background-color: #32425c;
+  color: white;
+  border-bottom: 1px solid #41546b;
+  &-active {
+    color: #32425c;
+    background-color: white;
+    border-bottom: 1px solid transparent;
+  }
+}
+
+.services__slide {
+  height: 280px;
+  width: 620px;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  &-1 {
+    background-image: url('../img/bg-delivery.png');
+  }
+  &-2 {
+    background-image: url('../img/bg-varanty.png');
+  }
+  &-3 {
+    background-image: url('../img/bg-credit.png ');
+  }
+  h3 {
+    color: #32425c;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 36px;
+    text-transform: uppercase;
+  }
+    p {
+    font-family: "PT Sans";
+    font-size: 13px;
+    line-height: 24px;
+    width: 380px;
+    margin-top: 25px; 
+  }
+}

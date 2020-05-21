@@ -1,0 +1,156 @@
+.filter {
+  font-family: "PT Sans";
+  display: flex;
+  flex-direction: column;
+  width: 220px;
+  margin-right: 20px;
+}
+
+.filter__block {
+  padding: 20px 0;
+  border-bottom: 1px solid #c5c5c5;
+  display: flex;
+  flex-direction: column;
+  h4 {    
+    font-size: 17px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+}
+
+.filter__priceSlide {
+  height: 80px;
+  background-color: $catalogColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.filter__priceRange {
+  width: 160px;
+  height: 2px;
+  background-color: #63a63e;
+}
+
+.filter__priceControl {
+  width: 20px;
+  height: 20px;
+  border: 8px solid #fff;
+  background-color: #ababab;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+}
+.filter__priceControlMin {
+  left: 20px;
+}
+.filter__priceControlMax {
+  right: 20px;
+}
+
+.filter__priceInputMin,
+.filter__priceInputMax {
+  width: 95px;
+  height: 40px;
+  background-color: $catalogColor;
+  border: none;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.filter__priceInput {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  &::after {
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 1px;
+    background-color: black;
+    left: calc(50% - 5px);
+    top: 50%;
+  }
+}
+
+.filter__maker {
+  &::before {
+    content: '';
+    width: 23px;
+    height: 23px;
+    border: 2px solid #c9c9c9;
+    border-radius: 3px;
+    margin-right: 8px;
+  }
+  &::after {
+   content: '';
+    top: -4px;
+    left: 10px;
+    width: 13px;
+    height: 21px;
+    border-right: 5px solid #c9c9c9;
+    border-bottom: 5px solid #c9c9c9;
+    transform: rotate(45deg);
+    box-shadow: 2px 0 0 0 white, inset -2px 0 0 0 white;
+  }
+}
+
+.filter__maker,
+.filter__type {
+  font-family: "PT Sans";
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.filter__type::before {
+  content: '';
+  width: 24px;
+  height: 24px;
+  border: 3px solid #c5c5c5;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.filter__type::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: #c5c5c5;
+  border-radius: 50%;
+  left: 7px;
+  top: 7px;
+}
+
+.filter__block:last-child {
+  border: none;
+}
+
+.filter button {
+  text-transform: uppercase;
+  font-size: 13px;
+  padding: 10px 38px;
+  border: 1px solid #c5c5c5;
+  border-radius: 2px;
+  margin-top: 55px;
+  margin-right: auto;
+  order: 10;
+  transition: all 0.3s;
+  &:hover {
+    background-color: #ca2c37;
+    color: white;
+    border-color: #ca2c37;
+  }
+  &:active {
+    background-color: #ba2732;
+    color: white;
+    border-color: #ba2732;
+  }
+}

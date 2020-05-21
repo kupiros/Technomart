@@ -1,0 +1,307 @@
+.header {
+  background-color: #f3f7f8;
+  padding-bottom: 60px;
+  color: white;
+}
+
+.header--color {
+  background-color: #293449;
+}
+
+.header__top,
+.header__mid,
+.header__bot {
+  display: flex;
+}
+
+.header__logo {
+  padding: 9px 55px;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+  text-transform: uppercase;
+  background-color: #ee3643;
+  margin-bottom: -5px;
+  border-bottom: 5px solid #b52933;
+  border-radius: 0;
+  &[href]:hover {
+    background-color: #ca2c37;
+  }
+  &[href]:active {
+    background-color: #ba2732;
+  }
+}
+
+.header__bookmarks,
+.header__checkout,
+.header__basket,
+.header__search {
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.header__search {
+  flex-grow: 1;
+  position: relative;
+  svg {
+    position: absolute;
+    left: 15px;
+    top: 12px;
+    fill: white;
+    opacity: 0.3;
+  }
+  &:hover {
+    background-color: #212a39;
+    & svg {
+      opacity: 1;
+    }
+  }
+  input {
+    background-color: transparent;
+    border: none;
+    padding-left: 50px;
+    width: 100%;
+    height: 100%;
+    &:focus {
+      background-color: white;
+      color: black;
+      & + svg {
+        fill: red;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+
+.header__bookmarks,
+.header__basket {
+  padding: 12px;
+  padding-left: 50px;
+  padding-right: 30px;
+  position: relative;
+  transition: all 0.3s;
+  &:hover {
+    background-color: #212a39;
+    &::before {
+      opacity: 1;
+    }
+  }
+  &:active {
+    background-color: #161c28;
+    opacity: 0.6;
+  }
+  &--notEmpty {
+    background-color: #ee3643;
+    &:hover {
+      background-color: #ca2c37;
+    }
+    &:active {
+      background-color: #ba2732;
+    }
+  }
+}
+
+.header__basket::before, 
+.header__bookmarks::before {
+  position: absolute;
+  top: 12px;
+  opacity: 0.3;
+}
+
+.header__bookmarks::before {
+  content: url("../img/svg/icon-bookmark.svg");
+  left: 23px;
+}
+
+.header__basket::before {
+  content: url("../img/svg/icon-cart.svg");
+  left: 15px;
+}
+
+.header__checkout {
+  background-color: #63a63e;
+  padding: 12px 20px;
+  transition: all 0.3s;
+  &:hover {
+    background-color: #5fba2e;
+  }
+  &:active {
+    background-color: #518533;
+    opacity: 0.6;
+  }
+}
+
+.header__mid {
+  padding-bottom: 40px;
+  padding-top: 46px;
+  align-items: flex-start;
+}
+
+.header__parph {
+  font-size: 16px;
+  line-height: 24px;
+  font-style: italic;
+  color: #ee3643;
+
+  width: 200px;
+  margin-left: 50px;
+  margin-right: 70px;
+}
+
+.header__tel {
+  font-size: 21px;
+  line-height: 21px;
+  color: #ee3643;
+  padding: 10px;
+  padding-left: 70px;
+  padding-right: 50px;
+  border: 3px solid white;
+  position: relative;
+  &::after {
+    content: url('../img/svg/icon-phone.svg');
+    position: absolute;
+    left: 12px;
+    top: 12px;
+  }
+}
+
+.header__adress {
+  font-size: 14px;
+  line-height: 24px;
+  color: #32425c;
+  text-align: center;
+}
+
+.header__userNav {
+  margin-left: auto;
+  position: relative;
+  display: flex;
+  .header__accountBut,
+  .header__logoutBut,
+  .header__myOrdersBut,
+  .header__myRoomBut {
+    display: none;
+  }
+  &--inLogin {
+    .header__loginBut,
+    .header__regBut {
+      display: none;
+    }
+    .header__accountBut,
+    .header__logoutBut,
+    .header__myOrdersBut,
+    .header__myRoomBut {
+      display: block;
+    }
+  }
+}
+
+.header__loginBut,
+.header__regBut,
+.header__accountBut  {
+  font-size: 21px;
+  line-height: 21px;
+  color: #000;
+  background-color: #fff;
+  padding: 12px 24px;
+  transition: all 0.3s;
+  &:hover {
+    color: #ee3643;
+  }
+  &:active {
+    color: #c9c9c9;
+  }
+}
+.header__accountBut:hover {
+  color: #000;
+}
+
+.header__loginBut {
+  padding-left: 50px;
+  margin-right: 10px;
+  position: relative;
+}
+
+.header__accountBut {
+  width: 255px;
+  padding-left: 45px;
+  text-align: left;
+  position: relative;
+}
+
+.header__logoutBut {
+  background-color: white;
+  width: 45px;
+  position: relative;
+}
+
+.header__loginBut,
+.header__logoutBut,
+.header__accountBut {
+  svg {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    fill: #c5c5c5;
+  }
+  &:hover svg {
+    fill: #212a39;
+  }
+  &:active svg {
+    fill: #c5c5c5;
+  } 
+}
+
+.header__myOrdersBut,
+.header__myRoomBut {
+  color: #32425c;
+  font-family: Cuprum;  
+  text-decoration: underline;
+  position: absolute;
+  bottom: -25px;
+  transition: all 0.3s;
+  &:hover {
+    color: #ee3643;
+  }
+  &:active {
+    color: #c5c5c5;
+  }
+}
+.header__myOrdersBut {
+  left: 20px;
+  &::after {
+    content: '';
+    position: absolute;
+    right: -18px;
+    top: 7px;
+    width: 5px;
+    height: 5px;
+    border-radius: 10px;
+    background-color: #212a39;
+  }
+}
+.header__myRoomBut {
+  right: 70px;
+}
+
+.header__bot li {
+  flex-grow: 1;
+  border-bottom: 5px solid #293449;
+}
+
+.header__bot a {
+  font-size: 17px;
+  line-height: 17px;
+  padding: 19px;
+  background-color: #32425c;
+  width: 100%;
+  transition: all 0.3s;
+  &[href]:hover {
+    background-color: #293448;
+  }
+  &[href]:active {
+    background-color: #1e2639;
+    color: #c9c9c9;
+  }
+}

@@ -1,0 +1,60 @@
+@import '_normalize';
+
+@font-face {
+  font-family: 'Cuprum';
+  src: url('../fonts/Cuprum-Regular.woff2') format('woff2'), url('../fonts/Cuprum-Regular.woff') format('woff'), url('../fonts/Cuprum-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Cuprum';
+  src: url('../fonts/Cuprum-Italic.woff2') format('woff2'), url('../fonts/Cuprum-Italic.woff') format('woff'), url('../fonts/Cuprum-Italic.ttf') format('truetype');
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'PT Sans';
+  src: url('../fonts/PTSans-Regular.woff2') format('woff2'), url('../fonts/PTSans-Regular.woff') format('woff'), url('../fonts/PTSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'PT Sans';
+  src: url('../fonts/PTSans-Bold.woff2') format('woff2'), url('../fonts/PTSans-Bold.woff') format('woff'), url('../fonts/PTSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+body {
+  font-family: "Cuprum", Arial, sans-serif;
+} 
+
+.container {
+  width: 980px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.redBut {
+  color: #ffffff;
+  font-size: 14px;
+  text-transform: uppercase;
+  background-color: #ee3643;
+  padding: 10px;
+  border-radius: 3px;
+  transition: all 0.3s;
+  &:hover {
+    background-color: #ca2c37;
+  }
+  &:active {
+    background-color: #ba2732;
+  }
+}
+
+@import '_header';
+@import '_promo';
+@import '_productCard';
+@import '_makerCard';
+@import '_itemList';
+@import '_services';
+@import '_about-contacts';
+@import '_footer';
+@import '_catalog';
+@import '_filter';
