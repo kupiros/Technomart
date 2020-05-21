@@ -353,6 +353,10 @@ body {
   line-height: 18px;
 }
 
+.header__contacts {
+  max-width: 275px;
+}
+
 .header__search {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
@@ -650,11 +654,16 @@ body {
   right: 70px;
 }
 
+.header__bot {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border-bottom: 5px solid #293449;
+}
+
 .header__bot li {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  border-bottom: 5px solid #293449;
 }
 
 .header__bot a {

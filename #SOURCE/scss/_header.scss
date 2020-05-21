@@ -40,6 +40,10 @@
   line-height: 18px;
 }
 
+.header__contacts {
+  max-width: 275px;
+}
+
 .header__search {
   flex-grow: 1;
   position: relative;
@@ -285,9 +289,13 @@
   right: 70px;
 }
 
+.header__bot {
+  flex-wrap: wrap;
+  border-bottom: 5px solid #293449;
+}
+
 .header__bot li {
   flex-grow: 1;
-  border-bottom: 5px solid #293449;
 }
 
 .header__bot a {
